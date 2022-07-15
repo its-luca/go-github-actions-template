@@ -35,5 +35,6 @@ jobs:
           with:
             platforms: linux/amd64,linux/arm64
             push: true
-            #todo: make this a variable
-            tags: ghcr.io/its-luca/go-github-actions-template:beta
+            tags: ghcr.io/${{ github.repository }}:beta
+            cache-from: type=gha
+            cache-to: type=gha,mode=max
