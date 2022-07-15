@@ -11,7 +11,7 @@ jobs:
    uses: ./.github/workflows/build-and-test.yml
   docker-beta:
     runs-on: ubuntu-latest
-    needs: build-and-check
+    needs: call-build-and-check
     steps:
         - name: Setup up Docker Buildx
           uses: docker/setup-buildx-action@v2
