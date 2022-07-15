@@ -1,9 +1,11 @@
 package main
 
-import "fmt"
+import (
+	"github.com/kr/pretty"
+)
 
 func MyFunc() {
-	fmt.Printf("Hello there ;)")
+	pretty.Log("Hello there ;)")
 }
 
 func main() {
