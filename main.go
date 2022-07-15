@@ -6,6 +6,7 @@ import (
 
 func MyFunc() {
 	pretty.Log("Hello there ;)")
+	pretty.Log("Testchange")
 }
 
 func main() {
