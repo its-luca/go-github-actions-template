@@ -37,4 +37,4 @@ jobs:
             platforms: linux/amd64,linux/arm64
             push: true
             #todo: make this a variable
-            tags: its-luca/go-github-actions-template:beta
+            tags: ghcr.io/its-luca/go-github-actions-template:beta
