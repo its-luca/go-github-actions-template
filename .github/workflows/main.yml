@@ -1,5 +1,11 @@
 name: learn-github-actions
-on: [push]
+on:
+  push:
+    branches:
+      - main
+    tags:
+      - v*
+
 jobs:
   build-and-check:
     runs-on: ubuntu-latest
@@ -31,9 +37,15 @@ jobs:
             username: ${{ github.actor }}
             password: ${{ secrets.docker }}
 
+        - name: Docker meta
+          id: meta
+          uses: docker/metadata-action@v4
+          with:
+            images: ghcr.io/${{ github.repository }}
+
         - name: Build and push
           uses: docker/build-push-action@v3
           with:
             platforms: linux/amd64,linux/arm64
             push: true
-            tags: ghcr.io/${{ github.repository }}:beta
+            tags: ${{ steps.meta.outputs.tags }}
