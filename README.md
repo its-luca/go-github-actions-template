@@ -6,7 +6,8 @@ I was unable to configure docker push to work with the auto managed GITHUB_TOKEN
 For now, you need to pace a write access token to a secret called `docker` (Under `Settings->Secrets`).
 
 ## Protected main workflow
-Go to `Settings->Branches->Add branch protection rule` and check `Require status checks to pass before merging`.
+Go to `Settings->Branches->Add branch protection rule` and check `Require status checks to pass before merging` and
+`Require a pull request before merging`.
 For normal accounts, this is only enforced on public repos.
 
 ## Dependabot
