@@ -8,7 +8,7 @@ on:
 
 jobs:
   call-build-and-check:
-   uses: .github/workflows/build-and-test.yml
+   uses: ./.github/workflows/build-and-test.yml
   docker-beta:
     runs-on: ubuntu-latest
     needs: build-and-check
