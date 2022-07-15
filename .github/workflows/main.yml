@@ -34,7 +34,7 @@ jobs:
           uses: docker/build-push-action@v3
           with:
             context: .
-            platform: linux/amd64,linux/arm64
+            platforms: linux/amd64,linux/arm64
             push: true
             #todo: make this a variable
             tags: its-luca/go-github-actions-template:beta
