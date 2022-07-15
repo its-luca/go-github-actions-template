@@ -19,8 +19,7 @@ jobs:
         run: go vet ./...
   docker-beta:
     runs-on: ubuntu-latest
-    permissions:
-      packages: write
+    permissions: write-all
     steps:
         - name: Setup up Docker Buildx
           uses: docker/setup-buildx-action@v2
